@@ -1,0 +1,49 @@
+{
+  "categories": [
+    {
+      "id": "0",
+      "name": "Posters",
+      "description": "Tous les posters dessiné par grim-art",
+      "button": "Voir posters",
+      "link": "/posters",
+      "url": "https://s4.aconvert.com/convert/p3r68-cdx67/aarmc-kymci.png"
+    },
+    {
+      "id": "1",
+      "name": "Posters",
+      "description": "Tous les posters dessiné par grim-art",
+      "button": "Voir posters",
+      "link": "/posters",
+      "url": "https://s4.aconvert.com/convert/p3r68-cdx67/aarmc-kymci.png"
+    }
+  ],
+  "posters": [
+    {
+      "id": "0",
+      "origin": "One piece",
+      "categories": "black",
+      "description": "luffy",
+      "image": "link",
+      "price": "10",
+      "url": "https://s4.aconvert.com/convert/p3r68-cdx67/aarmc-kymci.png"
+    },
+    {
+      "id": "1",
+      "origin": "One piece",
+      "categories": "black",
+      "description": "luffy",
+      "image": "link",
+      "price": "10",
+      "url": "https://s4.aconvert.com/convert/p3r68-cdx67/aarmc-kymci.png"
+    },
+    {
+      "id": "2",
+      "origin": "One piece",
+      "categories": "black",
+      "description": "luffy",
+      "image": "link",
+      "price": "10",
+      "url": "https://s4.aconvert.com/convert/p3r68-cdx67/aarmc-kymci.png"
+    }
+  ]
+}

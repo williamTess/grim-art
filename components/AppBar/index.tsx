@@ -1,38 +1,54 @@
 import * as React from "react";
-import { styled, alpha } from "@mui/material/styles";
-import AppBar from "@mui/material/AppBar";
-import Box from "@mui/material/Box";
-import Toolbar from "@mui/material/Toolbar";
-import IconButton from "@mui/material/IconButton";
-import Typography from "@mui/material/Typography";
-import MenuIcon from "@mui/icons-material/Menu";
 import SearchText from "../search";
+import { SignedIn, SignedOut, UserButton } from "@clerk/nextjs";
+
+import { IconButton, Link } from "@mui/material";
+
+import AccountCircleIcon from "@mui/icons-material/AccountCircle";
+import InfoIcon from "@mui/icons-material/Info";
+import {
+  Bar,
+  ConnectContainer,
+  SearchContainer,
+  UserContainer,
+  ImageContainer,
+  Image,
+} from "./style";
+import Background from "../../public/wallaper.jpg";
 
 export const SearchBar = () => {
   return (
-    <Box sx={{ flexGrow: 1 }}>
-      <AppBar position="static">
-        <Toolbar>
-          <IconButton
-            size="large"
-            edge="start"
-            color="inherit"
-            aria-label="open drawer"
-            sx={{ mr: 2 }}
-          >
-            <MenuIcon />
-          </IconButton>
-          <Typography
-            variant="h6"
-            noWrap
-            component="div"
-            sx={{ flexGrow: 1, display: { xs: "none", sm: "block" } }}
-          >
-            MUI
-          </Typography>
+    <>
+      <Bar>
+        <SearchContainer>
           <SearchText />
-        </Toolbar>
-      </AppBar>
-    </Box>
+        </SearchContainer>
+        <ConnectContainer>
+          <SignedIn>
+            <Link href={"/more-info"}>
+              <IconButton style={{ color: "#ffffff", padding: 0 }}>
+                <InfoIcon fontSize="large" />
+              </IconButton>
+            </Link>
+            <UserContainer>
+              <UserButton afterSignOutUrl="/" />
+            </UserContainer>
+          </SignedIn>
+          <SignedOut>
+            <Link href={"/more-info"}>
+              <IconButton style={{ color: "#ffffff", padding: 0 }}>
+                <InfoIcon fontSize="large" />
+              </IconButton>
+            </Link>
+            <Link href={"/sign-in"}>
+              <IconButton style={{ color: "#ffffff", padding: 0 }}>
+                <AccountCircleIcon fontSize="large" />
+              </IconButton>
+            </Link>
+          </SignedOut>
+        </ConnectContainer>
+      </Bar>
+      <ImageContainer>{/* <Image src={Background.src} /> */}</ImageContainer>
+    </>
   );
 };

@@ -6,11 +6,12 @@ export default function SearchText() {
   return (
     <Search>
       <SearchIconWrapper>
-        <SearchIcon />
+        <SearchIcon style={{ color: "#ffffff" }} />
       </SearchIconWrapper>
       <StyledInputBase
         placeholder="Search…"
         inputProps={{ "aria-label": "search" }}
+        style={{ color: "#ffffff" }}
       />
     </Search>
   );
