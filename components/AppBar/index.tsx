@@ -12,9 +12,7 @@ import {
   SearchContainer,
   UserContainer,
   ImageContainer,
-  Image,
 } from "./style";
-import Background from "../../public/wallaper.jpg";
 
 export const SearchBar = () => {
   return (
@@ -48,7 +46,7 @@ export const SearchBar = () => {
           </SignedOut>
         </ConnectContainer>
       </Bar>
-      <ImageContainer>{/* <Image src={Background.src} /> */}</ImageContainer>
+      <ImageContainer></ImageContainer>
     </>
   );
 };
