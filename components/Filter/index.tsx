@@ -33,6 +33,7 @@ const FilterSlide = (props: Props) => {
         <AccordionDetails>
           {origin.map((o) => (
             <FormControlLabel
+              key={o}
               control={<Checkbox onChange={(e) => handleChange(e, o)} />}
               label={o}
             />
@@ -50,6 +51,7 @@ const FilterSlide = (props: Props) => {
         <AccordionDetails>
           {style.map((o) => (
             <FormControlLabel
+              key={o}
               control={<Checkbox onChange={(e) => handleChange(e, o)} />}
               label={o}
             />

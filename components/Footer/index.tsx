@@ -34,8 +34,9 @@ const Footer = () => {
       <Column>
         <Title variant="h6">Contact</Title>
         <Typography variant={"subtitle2"}>
-          Vous pouvez contacter l'artiste grim-art ou faire des donations via
-          les liens suivant
+          {
+            "Vous pouvez contacter l'artiste grim-art ou faire des donations via les liens suivant"
+          }
         </Typography>
         <Socials>
           <InstagramIcon />
