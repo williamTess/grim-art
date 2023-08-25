@@ -3,7 +3,8 @@ import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import { ClerkProvider } from "@clerk/nextjs";
 import { SearchBar } from "../../components/AppBar";
-import CategoryProvider from "@/context/categories.context";
+import CategoryProvider from "@/context/app.context";
+import Footer from "/components/Footer";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -24,6 +25,7 @@ export default function RootLayout({
           <body className={inter.className}>
             <SearchBar />
             {children}
+            <Footer />
           </body>
         </html>
       </CategoryProvider>

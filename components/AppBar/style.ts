@@ -1,6 +1,7 @@
 "use client";
-import { styled } from "@mui/material";
+import { IconButton, styled } from "@mui/material";
 import Background from "../../public/wallaper.jpg";
+import { color } from "@/style/color";
 
 export const Bar = styled("div")(({ theme }) => ({
   position: "absolute",
@@ -11,8 +12,7 @@ export const Bar = styled("div")(({ theme }) => ({
   borderRadius: 10,
   margin: 15,
   boxSizing: "border-box",
-  background:
-    "linear-gradient(to right, rgba(79, 1, 71, 0.5), rgba(79, 1, 71, 0.5))",
+  background: color.bordeauShadow,
   [theme.breakpoints.down("sm")]: {
     width: "91%",
   },
@@ -38,7 +38,7 @@ export const UserContainer = styled("div")(() => ({
 }));
 
 export const ImageContainer = styled("div")(({ theme }) => ({
-  height: "80vh",
+  height: "70vh",
   width: "100vw",
   backgroundSize: "cover",
   backgroundImage: `url(${Background.src})`,
@@ -58,6 +58,7 @@ export const ImageContainer = styled("div")(({ theme }) => ({
   },
 }));
 
-export const Image = styled("img")(() => ({
-  objectFit: "cover",
+export const StyledIconButton = styled(IconButton)(() => ({
+  padding: 0,
+  paddingRight: 15,
 }));

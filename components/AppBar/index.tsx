@@ -2,7 +2,7 @@ import * as React from "react";
 import SearchText from "../search";
 import { SignedIn, SignedOut, UserButton } from "@clerk/nextjs";
 
-import { IconButton, Link } from "@mui/material";
+import { Link } from "@mui/material";
 
 import AccountCircleIcon from "@mui/icons-material/AccountCircle";
 import InfoIcon from "@mui/icons-material/Info";
@@ -12,6 +12,7 @@ import {
   SearchContainer,
   UserContainer,
   ImageContainer,
+  StyledIconButton,
 } from "./style";
 
 export const SearchBar = () => {
@@ -24,9 +25,9 @@ export const SearchBar = () => {
         <ConnectContainer>
           <SignedIn>
             <Link href={"/more-info"}>
-              <IconButton style={{ color: "#ffffff", padding: 0 }}>
+              <StyledIconButton style={{ color: "#ffffff" }}>
                 <InfoIcon fontSize="large" />
-              </IconButton>
+              </StyledIconButton>
             </Link>
             <UserContainer>
               <UserButton afterSignOutUrl="/" />
@@ -34,14 +35,14 @@ export const SearchBar = () => {
           </SignedIn>
           <SignedOut>
             <Link href={"/more-info"}>
-              <IconButton style={{ color: "#ffffff", padding: 0 }}>
+              <StyledIconButton style={{ color: "#ffffff" }}>
                 <InfoIcon fontSize="large" />
-              </IconButton>
+              </StyledIconButton>
             </Link>
             <Link href={"/sign-in"}>
-              <IconButton style={{ color: "#ffffff", padding: 0 }}>
+              <StyledIconButton style={{ color: "#ffffff" }}>
                 <AccountCircleIcon fontSize="large" />
-              </IconButton>
+              </StyledIconButton>
             </Link>
           </SignedOut>
         </ConnectContainer>

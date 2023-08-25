@@ -5,7 +5,7 @@ import { authMiddleware } from "@clerk/nextjs";
 // See https://clerk.com/docs/nextjs/middleware for more information about configuring your middleware
 
 export default authMiddleware({
-  publicRoutes: ["/", "/sign-in", "/sign-up", "/more-info"],
+  publicRoutes: ["/", "/sign-in", "/sign-up", "/more-info", "/posters"],
 });
 
 export const config = {
